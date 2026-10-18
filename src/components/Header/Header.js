@@ -1,27 +1,36 @@
+
 import "./Header.css";
 
 function Header() {
   return (
     <header className="Header">
-      <div className="header-logo">Logo</div>
+      <div className="header-logo">
+        <a href="/" aria-label="Home">Logo</a>
+      </div>
+
       <div className="header-elements">
         <ol>
           <li id="li1">
-            <a href="/#About"></a>
+            <a href="/#About">About</a>
           </li>
           <li id="li2">
-            <a href="/#studies"></a>
+            <a href="/#studies">Studies</a>
           </li>
           <li id="li3">
-            <a href="/#projects"></a>
+            <a href="/#projects">Projects</a>
           </li>
           <li id="li4">
-            <a href="/#contact"></a>
+            <a href="/#contact">Contact</a>
           </li>
         </ol>
-        <div>Resume</div>
+
+        <a className="resume" href="/resume.pdf" target="_blank">
+          Resume
+        </a>
       </div>
     </header>
   );
 }
+
 export default Header;
+ 
