@@ -1,0 +1,62 @@
+.Header {
+  display: flex;
+  -moz-box-pack: justify;
+  justify-content: space-between;
+  -moz-box-align: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  z-index: 11;
+  padding: 0px 50px;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(10, 25, 47, 0.85);
+  filter: none !important;
+  pointer-events: auto !important;
+  user-select: auto !important;
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
+  .header-logo {
+    display: flex;
+    -moz-box-pack: center;
+    justify-content: center;
+    -moz-box-align: center;
+    align-items: center;
+  }
+  .header-elements {
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    ol {
+      display: flex;
+      -moz-box-pack: justify;
+      justify-content: space-between;
+      -moz-box-align: center;
+      align-items: center;
+      padding: 0px;
+      margin: 0px;
+      list-style: none;
+      li {
+        margin: 0px 5px;
+        position: relative;
+        counter-increment: item 1;
+        font-size: var(--fz-xs);
+        a {
+          padding: 10px;
+        }
+        #li1 {
+          transition-delay: 0ms;
+        }
+        #li2 {
+          transition-delay: 100ms;
+        }
+        #li3 {
+          transition-delay: 200ms;
+        }
+        #li4 {
+          transition-delay: 300ms;
+        }
+      }
+    }
+  }
+}
