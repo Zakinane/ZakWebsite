@@ -24,7 +24,7 @@ function Header() {
           </li>
         </ol>
 
-        <a className="resume" href="/resume.pdf" target="_blank">
+        <a className="resume" href="../../assets/resume" download="Zaki DJABA Resume.pdf" target="_blank">
           Resume
         </a>
       </div>
