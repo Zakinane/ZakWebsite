@@ -1,0 +1,137 @@
+.Experience {
+  padding: 100px 150px;
+  margin: 0 auto;
+  scroll-margin-top: 100px;
+}
+
+.experience-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.experience-heading h2 {
+  margin: 0;
+  color: var(--lightest-slate);
+  font-size: var(--fz-heading);
+  white-space: nowrap;
+}
+
+.experience-heading::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--lightest-navy);
+}
+
+.experience-number {
+  color: var(--green);
+  font-family: var(--font-mono);
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.experience-card {
+  display: grid;
+  grid-template-columns: 140px 1fr auto;
+  gap: 25px;
+  padding: 25px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.experience-card:hover {
+  background-color: var(--light-navy);
+  border-color: var(--lightest-navy);
+}
+
+.experience-period {
+  padding-top: 5px;
+  color: var(--slate);
+  font-family: var(--font-mono);
+  font-size: var(--fz-xs);
+}
+
+.experience-details h3 {
+  margin: 0 0 8px;
+  color: var(--lightest-slate);
+  font-size: var(--fz-lg);
+}
+
+.experience-details h4 {
+  margin: 0 0 15px;
+  color: var(--green);
+  font-size: var(--fz-sm);
+  font-weight: 400;
+}
+
+.experience-details p {
+  color: var(--slate);
+  font-size: var(--fz-sm);
+  line-height: 1.8;
+}
+
+.experience-index {
+  color: var(--lightest-navy);
+  font-family: var(--font-mono);
+  font-size: var(--fz-xl);
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 20px 0 0;
+  list-style: none;
+}
+
+.tag-list li {
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: var(--fz-xs);
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 30px;
+  color: var(--green);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: var(--fz-sm);
+}
+
+.text-link:hover {
+  color: var(--lightest-slate);
+}
+
+@media (max-width: 768px) {
+  .Experience {
+    width: calc(100% - 40px);
+    padding: 75px 0;
+  }
+
+  .experience-heading h2 {
+    font-size: var(--fz-xl);
+  }
+
+  .experience-card {
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    padding: 20px 10px;
+  }
+
+  .experience-period {
+    grid-column: 1 / -1;
+  }
+
+  .experience-details {
+    grid-column: 1 / -1;
+  }
+}

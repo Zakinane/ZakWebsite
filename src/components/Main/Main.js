@@ -69,7 +69,7 @@ function Main() {
   }, []);
 
   return (
-    <main className="Main">
+    <main className="Main" id="About">
       <DotGrid />
 
       <div className="main-content" ref={contentRef}>

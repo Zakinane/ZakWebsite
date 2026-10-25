@@ -1,15 +1,25 @@
-// https://v4.brittanychiang.com/
 import "./App.css";
-import Header from "./components/Header/Header";
-import Main from "./components/Main/Main";
-import DotGrid from "./components/DotGrid/DotGrid";
+
+import Header from "./components/Header/Header.js";
+import Main from "./components/Main/Main.js";
+import About from "./components/About/About.js";
+import Experience from "./components/Experience/Experience.js";
+import Projects from "./components/Projects/Projects.js";
+import Contacts from "./components/Contacts/Contacts.js";
+import Contact from "./components/Contact/Contact.js";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Header />
       <Main />
-    </div>
+      <div id="top" />
+      <About />
+      <Experience />
+      <Projects />
+      <Contacts />
+      <Contact />
+    </>
   );
 }
 

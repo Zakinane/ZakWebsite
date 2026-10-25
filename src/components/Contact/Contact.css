@@ -1,0 +1,80 @@
+
+.get-in-touch {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 150px 25px 120px;
+  text-align: center;
+}
+
+.contact-overline {
+  margin-bottom: 20px;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: var(--fz-sm);
+}
+
+.get-in-touch h2 {
+  margin: 0 0 25px;
+  color: var(--lightest-slate);
+  font-size: clamp(40px, 6vw, 60px);
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.contact-description {
+  max-width: 540px;
+  margin: 0 auto 40px;
+  color: var(--slate);
+  font-size: var(--fz-lg);
+  line-height: 1.8;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 18px 28px;
+  border: 1px solid var(--green);
+  border-radius: 4px;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: var(--fz-sm);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.contact-button:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Footer */
+
+.portfolio-footer {
+  padding: 20px 20px 30px;
+  text-align: center;
+}
+
+.portfolio-footer a {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--slate);
+  font-family: var(--font-mono);
+  font-size: var(--fz-xs);
+  line-height: 1.5;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.portfolio-footer a:hover {
+  color: var(--green);
+}
+
+@media (max-width: 768px) {
+  .get-in-touch {
+    padding: 100px 25px 80px;
+  }
+
+  .contact-description {
+    font-size: var(--fz-md);
+  }
+}

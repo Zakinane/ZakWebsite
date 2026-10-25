@@ -1,0 +1,90 @@
+
+.side-contact {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 40px;
+  color: var(--slate);
+}
+
+.side-contact-left {
+  left: 40px;
+}
+
+.side-contact-right {
+  right: 40px;
+}
+
+.side-contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.side-contact-links a {
+  width: 30px;
+  color: var(--slate);
+  font-family: var(--font-mono);
+  font-size: var(--fz-sm);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.side-contact-links a:hover {
+  color: var(--green);
+  transform: translateY(-3px);
+}
+
+.side-email {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px;
+  color: var(--slate);
+  font-family: var(--font-mono);
+  font-size: var(--fz-xs);
+  letter-spacing: 1px;
+  text-decoration: none;
+  writing-mode: vertical-rl;
+  transition: var(--transition);
+  font-size: large;
+}
+
+.side-email:hover {
+  color: var(--green);
+  transform: translateY(-3px);
+}
+
+.side-contact::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin-top: 25px;
+  background-color: var(--slate);
+}
+
+.side-contact-right::after {
+  margin-top: 0;
+}
+
+@media (max-width: 1080px) {
+  .side-contact-left {
+    left: 20px;
+  }
+
+  .side-contact-right {
+    right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .side-contact {
+    display: none;
+  }
+}
