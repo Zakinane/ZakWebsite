@@ -29,7 +29,7 @@ const experiences = [
 
 function Experience() {
   return (
-    <section className="portfolio-section" class="Experience">
+    <section className="portfolio-section" class="Experience" id="experience">
       <div className="section-heading">
         <span className="section-number">02.</span>
         <h2>Experience & Journey</h2>

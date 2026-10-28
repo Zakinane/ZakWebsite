@@ -17,7 +17,7 @@ function Header() {
           </li>
 
           <li id="li2">
-            <a href="/#studies">Studies</a>
+            <a href="/#experience">Experience</a>
           </li>
 
           <li id="li3">

@@ -2,14 +2,16 @@
 import "./About.css";
 
 const technologies = [
+  "HTML5 & CSS",
   "JavaScript (ES6+)",
-  "React",
-  "HTML & CSS",
-  "C",
-  "C++",
+  "ReactJS",
+  "ExpressJS",
   "Node.js",
   "Git & GitHub",
+  "C",
+  "C++",
   "SQL",
+  "Java"
 ];
 
 function About() {
