@@ -1,28 +1,31 @@
-
 import "./Projects.css";
+import Phansite from "../../assets/img/phansite.png";
+import Hearbeat from "../../assets/img/heartbeat.png";
+import Portfolio from "../../assets/img/portfolio.png";
 
 const projects = [
   {
     number: "01",
-    title: "Heartbeat",
-    category: "Creative Development",
-    description:
-      "An immersive web experience where scrolling drives a heartbeat visualization, combining mathematical graphs, animation, and sound.",
-    technologies: ["React", "Canvas", "JavaScript", "CSS"],
-    image: "/images/heartbeat-preview.png",
-    github: "https://github.com/YOUR_USERNAME/heartbeat",
-    demo: "#",
-  },
-  {
-    number: "02",
     title: "The Phantom Afficinado Website",
     category: "Full-Stack Development",
     description:
       "A community platform inspired by the atmosphere of Persona 5, featuring discussions, interactive polls, and a distinctive visual identity.",
     technologies: ["React", "Node.js", "MongoDB", "CSS"],
-    image: "../../assets/img/phansite.png",
-    github: "https://github.com/Zakinane/Phantom-Aficionado-Website-Front",
+    image: Phansite,
+    frontend: "https://github.com/Zakinane/Phantom-Aficionado-Website-Front",
+    backend: "https://github.com/Zakinane/Phantom-Aficionado-Website-Back",
     demo: "https://phantom-aficionado-website-nu.vercel.app/",
+  },
+  {
+    number: "02",
+    title: "Heartbeat",
+    category: "Creative Development",
+    description:
+      "An immersive web experience where scrolling drives a heartbeat visualization, combining mathematical graphs, animation, and sound.",
+    technologies: ["React", "Canvas", "JavaScript", "CSS"],
+    image: Hearbeat,
+    github: "https://github.com/Zakinane/heartbeat",
+    // No demo for this project
   },
   {
     number: "03",
@@ -31,9 +34,9 @@ const projects = [
     description:
       "A personal website exploring typography, motion, and interactive visual details to showcase my work and development journey.",
     technologies: ["React", "JavaScript", "CSS"],
-    image: "/images/portfolio-preview.png",
-    github: "https://github.com/YOUR_USERNAME/portfolio",
-    demo: "#",
+    image: Portfolio,
+    github: "https://github.com/Zakinane/ZakWebsite",
+    demo: "https://zak-website-zeta.vercel.app/",
   },
 ];
 
@@ -46,29 +49,33 @@ function Projects() {
       </div>
 
       <p className="section-intro">
-        A selection of projects where I experiment, learn,
-        and bring ideas to life.
+        A selection of projects that helped me learn and experiment
       </p>
 
       <div className="projects-grid">
         {projects.map((project) => (
           <article className="project-card" key={project.number}>
-            <div className="project-image">
+            <div
+              className="project-image"
+              onClick={() => {
+                if (project.demo) {
+                  window.open(project.demo, "_blank", "noopener,noreferrer");
+                }
+              }}
+              role={project.demo ? "link" : undefined}
+              tabIndex={project.demo ? 0 : undefined}
+            >
               <img
                 src={project.image}
                 alt={`${project.title} project preview`}
                 loading="lazy"
               />
 
-              <span className="project-number">
-                {project.number}
-              </span>
+              <span className="project-number">{project.number}</span>
             </div>
 
             <div className="project-content">
-              <span className="project-category">
-                {project.category}
-              </span>
+              <span className="project-category">{project.category}</span>
 
               <h3>{project.title}</h3>
 
@@ -81,23 +88,49 @@ function Projects() {
               </ul>
 
               <div className="project-links">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`View ${project.title} source code`}
-                >
-                  GitHub ↗
-                </a>
+                {project.frontend && (
+                  <a
+                    href={project.frontend}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`View ${project.title} frontend source code`}
+                  >
+                    Front-end ↗
+                  </a>
+                )}
 
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`View ${project.title} live demo`}
-                >
-                  Live demo ↗
-                </a>
+                {project.backend && (
+                  <a
+                    href={project.backend}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`View ${project.title} backend source code`}
+                  >
+                    Back-end ↗
+                  </a>
+                )}
+
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`View ${project.title} source code`}
+                  >
+                    GitHub ↗
+                  </a>
+                )}
+
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`View ${project.title} live demo`}
+                  >
+                    Live demo ↗
+                  </a>
+                )}
               </div>
             </div>
           </article>

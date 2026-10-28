@@ -33,7 +33,7 @@ function Contact() {
           aria-label="Built by Zak, inspired by Brittany Chiang — GitHub"
         >
           <span>Built by Zak</span>
-          <span>Inspired by Brittany Chiang</span>
+          <span>Inspired by bchiang7</span>
         </a>
       </footer>
     </>

@@ -1,4 +1,3 @@
-
 import "./Experience.css";
 
 const experiences = [
@@ -39,9 +38,7 @@ function Experience() {
       <div className="experience-list">
         {experiences.map((item, index) => (
           <article className="experience-card" key={item.title}>
-            <div className="experience-period">
-              {item.period}
-            </div>
+            <div className="experience-period">{item.period}</div>
 
             <div className="experience-details">
               <h3>{item.title}</h3>
@@ -57,21 +54,18 @@ function Experience() {
               </ul>
             </div>
 
-            <span className="experience-index">
-              0{index + 1}
-            </span>
+            <span className="experience-index">0{index + 1}</span>
           </article>
         ))}
       </div>
 
       <a
-        className="text-link"
-        download="Zaki DJABA Resume.pdf"
+        className="resume"
         href="/resume.pdf"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
       >
-        View my resume <span>↗</span>
+        Resume ↗
       </a>
     </section>
   );

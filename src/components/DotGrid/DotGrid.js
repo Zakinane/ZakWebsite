@@ -103,7 +103,7 @@ function DotGrid() {
           Math.PI * 2,
         );
 
-        ctx.fillStyle = `rgba(100, 255, 218, ${opacity})`;
+        ctx.fillStyle = `rgba(101, 183, 50, ${opacity})`;
         ctx.fill();
       }
 
